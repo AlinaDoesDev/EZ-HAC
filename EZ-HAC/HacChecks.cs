@@ -30,18 +30,28 @@ namespace EZ_HAC
         public static string HacVersionId;
         private static void CheckHactoolExe()
         {
-            string HacHash = GetFileHash(Binary);
             try
             {
-            for (int Index = 0; Index < VerifiedHacVersions.Length; Index++)
-            {
-                HacInfo HacVersionInfo = VerifiedHacVersions[Index];
-                if (HacVersionInfo.FileHash == HacHash)
+                string GetFileHash(string FileName)
                 {
-                    HacVersionId = HacVersionInfo.VersionId;
-                    return;
+                    using (SHA256 HashContext = SHA256.Create())
+                    {
+                        using (FileStream Stream = File.OpenRead(FileName))
+                        {
+                            return BitConverter.ToString(HashContext.ComputeHash(Stream)).Replace("-", "");
+                        }
+                    }
                 }
-            }
+                string HacHash = GetFileHash(Binary);
+                for (int Index = 0; Index < VerifiedHacVersions.Length; Index++)
+                {
+                    HacInfo HacVersionInfo = VerifiedHacVersions[Index];
+                    if (HacVersionInfo.FileHash == HacHash)
+                    {
+                        HacVersionId = HacVersionInfo.VersionId;
+                        return;
+                    }
+                }
                 DialogResult HashResult = MessageBox.Show(ErrBadHash, ErrHeader, MessageBoxButtons.YesNo);
                 if (HashResult == DialogResult.No)
                 {
@@ -50,9 +60,9 @@ namespace EZ_HAC
                 else
                 {
                     HacVersionId = Unknown;
-                }              
+                }
             }
-            
+
             catch (FileNotFoundException)
             {
                 MessageBox.Show(ErrBinaryMissing, ErrHeaderFatal, MessageBoxButtons.OK);
@@ -69,15 +79,6 @@ namespace EZ_HAC
             }
         }
 
-        private static string GetFileHash(string FileName)
-        {
-            using (SHA256 HashContext = SHA256.Create())
-            {
-                using (FileStream Stream = File.OpenRead(FileName))
-                {
-                    return BitConverter.ToString(HashContext.ComputeHash(Stream)).Replace("-","");
-                }
-            }
-        }
+
     }
 }

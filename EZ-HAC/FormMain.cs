@@ -59,7 +59,7 @@ namespace EZ_HAC
             {
                 if (NcaTitleKey.Text != "")
                 {
-                    RunHactool(Keyfile + Quote + NcaPath.Text + Quote + Titlekey + NcaTitleKey.Text + ExeFSDir + NcaOutputPath.Text + Quote + RomFS + NcaOutputPath.Text + RomFSExt);      
+                    RunHactool(Keyfile + Quote + NcaPath.Text + Quote + Titlekey + NcaTitleKey.Text + ExeFSDir + NcaOutputPath.Text + Quote + RomFS + NcaOutputPath.Text + RomFSExt);
                 }
 
                 else
@@ -79,7 +79,7 @@ namespace EZ_HAC
                     RunHactool(Keyfile + Quote + NcaPath.Text + Quote + ExeFSDir + NcaOutputPath.Text + ExeFS + RomFSDir + NcaOutputPath.Text + RomFSFol);
                 }
             }
-        
+
             foreach (TabPage Page in HacTab.TabPages) Page.Enabled = true;
             MessageBox.Show(DoneNCAMsg, DoneHeader, MessageBoxButtons.OK);
         }
