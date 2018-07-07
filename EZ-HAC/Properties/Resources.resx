@@ -117,5 +117,128 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Binary" xml:space="preserve">
+    <value>hactool.exe</value>
+  </data>
+  <data name="DescStrDefault" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="DescStrDialogNCAOut" xml:space="preserve">
+    <value>Browse for NCA output folder</value>
+  </data>
+  <data name="DescStrDialogXCIOut" xml:space="preserve">
+    <value>Browse for XCI output folder</value>
+  </data>
+  <data name="DescStrNCA" xml:space="preserve">
+    <value>Extract all NCA contents.</value>
+  </data>
+  <data name="DescStrXCI" xml:space="preserve">
+    <value>Extract all XCI contents.</value>
+  </data>
+  <data name="DialogNCAInTitle" xml:space="preserve">
+    <value>Browse for NCA file</value>
+  </data>
+  <data name="DialogXCIInTitle" xml:space="preserve">
+    <value>Browse for XCI file</value>
+  </data>
+  <data name="DoneHeader" xml:space="preserve">
+    <value>Done!</value>
+  </data>
+  <data name="DoneNCAMsg" xml:space="preserve">
+    <value>Done extracting NCA contents!</value>
+  </data>
+  <data name="DoneXCIMsg" xml:space="preserve">
+    <value>Done extracting XCI contents!</value>
+  </data>
+  <data name="ErrBadHash" xml:space="preserve">
+    <value>The hactool executable hash does not match verified hactool hashes, do you want to continue?
+Some functions of EZ-HAC may not function with an invalid hactool executable!</value>
+  </data>
+  <data name="ErrBinaryMissing" xml:space="preserve">
+    <value>The hactool executable was not found, please make sure the hactool executable is in the same path as the EZ-HAC executable!</value>
+  </data>
+  <data name="ErrHeader" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="ErrHeaderFatal" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="ErrInvalidInputNCAPath" xml:space="preserve">
+    <value>Invalid NCA path!</value>
+  </data>
+  <data name="ErrInvalidInputXCIPath" xml:space="preserve">
+    <value>Invalid XCI path!</value>
+  </data>
+  <data name="ErrInvalidOutputNCAPath" xml:space="preserve">
+    <value>Invalid NCA output path!</value>
+  </data>
+  <data name="ErrInvalidOutputXCIPath" xml:space="preserve">
+    <value>Invalid XCI output path!</value>
+  </data>
+  <data name="ErrKeysFileMissing" xml:space="preserve">
+    <value>Your hactool keys were not found, please make sure your hactool keys is in the same path as the EZ-HAC executable and called "keys.dat"!</value>
+  </data>
+  <data name="ExeFS" xml:space="preserve">
+    <value>\exefs"</value>
+  </data>
+  <data name="ExeFSDir" xml:space="preserve">
+    <value> --exefsdir="</value>
+  </data>
+  <data name="Keyfile" xml:space="preserve">
+    <value>-k keys.dat </value>
+  </data>
+  <data name="Keys" xml:space="preserve">
+    <value>keys.dat</value>
+  </data>
+  <data name="NCAFilter" xml:space="preserve">
+    <value>NCA file (*.nca)|*.nca</value>
+  </data>
+  <data name="Outdir" xml:space="preserve">
+    <value> --outdir="</value>
+  </data>
+  <data name="Quote" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="RomFS" xml:space="preserve">
+    <value> --romfs="</value>
+  </data>
+  <data name="RomFSDir" xml:space="preserve">
+    <value> --romfsdir="</value>
+  </data>
+  <data name="RomFSExt" xml:space="preserve">
+    <value>\.romfs"</value>
+  </data>
+  <data name="RomFSFol" xml:space="preserve">
+    <value>\romfs"</value>
+  </data>
+  <data name="Titlekey" xml:space="preserve">
+    <value> --titlekey=</value>
+  </data>
+  <data name="TypeXCI" xml:space="preserve">
+    <value>-t xci </value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="V100" xml:space="preserve">
+    <value>1.0.0</value>
+  </data>
+  <data name="V101" xml:space="preserve">
+    <value>1.0.1</value>
+  </data>
+  <data name="V110" xml:space="preserve">
+    <value>1.1.0</value>
+  </data>
+  <data name="Ver100Hash" xml:space="preserve">
+    <value>B700771B2C236DD109A15CBC6E75D810E64F2C03F158AE7A6A3AF85181405226</value>
+  </data>
+  <data name="Ver101Hash" xml:space="preserve">
+    <value>C20C70DE51642A431244D3CC5E88CF711A1A523D17AB2692E37DCB69EA26A12E</value>
+  </data>
+  <data name="Ver110Hash" xml:space="preserve">
+    <value>D148EB2CD5D71B1BF87B0D39A399CF362671AF6E3A8C55D69225AE0DB9453EA2</value>
+  </data>
+  <data name="XCIFilter" xml:space="preserve">
+    <value>XCI file (*.xci)|*.xci</value>
+  </data>
 </root>
