@@ -1,93 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
-
 namespace EZ_HAC
 {
+    using static Properties.Resources;
+    using static Environment;
     class HacChecks
     {
-        private static HacInfo[] VerifiedHacVersions =
-        {
-            new HacInfo { FileHash = "1f609b4d4814e238522b54a49f7a5251", VersionId = "1.1.0" },
-            new HacInfo { FileHash = "8a99a879262036eb2ed12d92f358ce56", VersionId = "1.0.1" },
-            new HacInfo { FileHash = "f3433e97261c1f8d907aa2bbc5ffa024", VersionId = "1.0.0" }
-        };
-
-        public static string HacVersionId;
-
         public static void RunChecks()
         {
             CheckHactoolExe();
             CheckHactoolKeys();
         }
 
+        struct HacInfo
+        {
+            public string FileHash;
+            public string VersionId;
+        }
+
+        private static HacInfo[] VerifiedHacVersions =
+        {
+        new HacInfo{FileHash = Ver110Hash, VersionId = V110},
+        new HacInfo{FileHash = Ver101Hash, VersionId = V101},
+        new HacInfo{FileHash = Ver100Hash, VersionId = V100}
+        };
+
+        public static string HacVersionId;
         private static void CheckHactoolExe()
         {
-            if (!File.Exists("hactool.exe"))
+            string HacHash = GetFileHash(Binary);
+            try
             {
-                MessageBox.Show("The hactool executable was not found, please make sure the hactool executable is in the same path as the EZ-HAC executable!", "Error!", MessageBoxButtons.OK);
-                Environment.Exit(0);
-            }
-
-            bool   InvalidHash = true;
-            string HacHash     = GetFileHash("hactool.exe");
-
-            // Debug outputs hactool executable hash
-#if DEBUG
-            Console.WriteLine($"hactool Executable File Hash: {HacHash}");
-#endif
-
             for (int Index = 0; Index < VerifiedHacVersions.Length; Index++)
             {
                 HacInfo HacVersionInfo = VerifiedHacVersions[Index];
-
                 if (HacVersionInfo.FileHash == HacHash)
                 {
-                    InvalidHash  = false;
                     HacVersionId = HacVersionInfo.VersionId;
+                    return;
                 }
             }
-
-            // Debug does not show a messagebox for invalid hactool executable hashes
-            if (InvalidHash)
-            {
-#if !DEBUG
-                DialogResult HashResult = MessageBox.Show("The hactool executable hash does not match verified hactool hashes, do you want to continue? Some functions of EZ-HAC may not function with an invalid hactool executable!", "Warning!", MessageBoxButtons.YesNo);
-
+                DialogResult HashResult = MessageBox.Show(ErrBadHash, ErrHeader, MessageBoxButtons.YesNo);
                 if (HashResult == DialogResult.No)
                 {
-                    Environment.Exit(0);
+                    Exit(0);
                 }
                 else
                 {
-#endif
-                    HacVersionId = "Unknown";
-#if !DEBUG
-                }
-#endif
+                    HacVersionId = Unknown;
+                }              
+            }
+            
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show(ErrBinaryMissing, ErrHeaderFatal, MessageBoxButtons.OK);
+                Exit(0);
             }
         }
 
         private static void CheckHactoolKeys()
         {
-            if (!File.Exists("keys.dat"))
+            if (!File.Exists(Keys))
             {
-                MessageBox.Show("Your hactool keys were not found, please make sure your hactool keys is in the same path as the EZ-HAC executable and called \"keys.dat\"!", "Error!", MessageBoxButtons.OK);
-                Environment.Exit(0);
+                MessageBox.Show(ErrKeysFileMissing, ErrHeaderFatal, MessageBoxButtons.OK);
+                Exit(0);
             }
         }
 
         private static string GetFileHash(string FileName)
         {
-            using (MD5 HashContext = MD5.Create())
+            using (SHA256 HashContext = SHA256.Create())
             {
                 using (FileStream Stream = File.OpenRead(FileName))
                 {
-                    return BitConverter.ToString(HashContext.ComputeHash(Stream)).Replace("-", "").ToLowerInvariant();
+                    return BitConverter.ToString(HashContext.ComputeHash(Stream)).Replace("-","");
                 }
             }
         }

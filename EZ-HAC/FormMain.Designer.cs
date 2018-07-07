@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.BuildLabel = new System.Windows.Forms.Label();
             this.HactoolVersion = new System.Windows.Forms.Label();
             this.HacTab = new System.Windows.Forms.TabControl();
             this.XciExtractionTab = new System.Windows.Forms.TabPage();
@@ -52,8 +51,6 @@
             this.NcaEmulatorExtract = new System.Windows.Forms.CheckBox();
             this.NcaExtract = new System.Windows.Forms.Button();
             this.DescriptionLabel = new System.Windows.Forms.Label();
-            this.HacProgress = new System.Windows.Forms.ProgressBar();
-            this.ProgressLabel = new System.Windows.Forms.Label();
             this.HacTab.SuspendLayout();
             this.XciExtractionTab.SuspendLayout();
             this.NcaExtractionTab.SuspendLayout();
@@ -63,38 +60,32 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(12, 9);
+            this.TitleLabel.Location = new System.Drawing.Point(24, 17);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(136, 37);
+            this.TitleLabel.Size = new System.Drawing.Size(270, 73);
             this.TitleLabel.TabIndex = 1;
             this.TitleLabel.Text = "EZ-HAC";
-            // 
-            // BuildLabel
-            // 
-            this.BuildLabel.AutoSize = true;
-            this.BuildLabel.Location = new System.Drawing.Point(154, 27);
-            this.BuildLabel.Name = "BuildLabel";
-            this.BuildLabel.Size = new System.Drawing.Size(38, 13);
-            this.BuildLabel.TabIndex = 2;
-            this.BuildLabel.Text = "? build";
             // 
             // HactoolVersion
             // 
             this.HactoolVersion.AutoSize = true;
-            this.HactoolVersion.Location = new System.Drawing.Point(238, 27);
+            this.HactoolVersion.Location = new System.Drawing.Point(476, 52);
+            this.HactoolVersion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.HactoolVersion.Name = "HactoolVersion";
-            this.HactoolVersion.Size = new System.Drawing.Size(83, 13);
+            this.HactoolVersion.Size = new System.Drawing.Size(173, 25);
             this.HactoolVersion.TabIndex = 3;
-            this.HactoolVersion.Text = "hactool Version:";
+            this.HactoolVersion.Text = "hactool Version: ";
             // 
             // HacTab
             // 
             this.HacTab.Controls.Add(this.XciExtractionTab);
             this.HacTab.Controls.Add(this.NcaExtractionTab);
-            this.HacTab.Location = new System.Drawing.Point(12, 49);
+            this.HacTab.Location = new System.Drawing.Point(24, 94);
+            this.HacTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.HacTab.Name = "HacTab";
             this.HacTab.SelectedIndex = 0;
-            this.HacTab.Size = new System.Drawing.Size(351, 390);
+            this.HacTab.Size = new System.Drawing.Size(702, 750);
             this.HacTab.TabIndex = 5;
             // 
             // XciExtractionTab
@@ -106,10 +97,11 @@
             this.XciExtractionTab.Controls.Add(this.XciBrowse);
             this.XciExtractionTab.Controls.Add(this.XciFileLabel);
             this.XciExtractionTab.Controls.Add(this.XciPath);
-            this.XciExtractionTab.Location = new System.Drawing.Point(4, 22);
+            this.XciExtractionTab.Location = new System.Drawing.Point(8, 39);
+            this.XciExtractionTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciExtractionTab.Name = "XciExtractionTab";
-            this.XciExtractionTab.Padding = new System.Windows.Forms.Padding(3);
-            this.XciExtractionTab.Size = new System.Drawing.Size(343, 364);
+            this.XciExtractionTab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.XciExtractionTab.Size = new System.Drawing.Size(686, 703);
             this.XciExtractionTab.TabIndex = 0;
             this.XciExtractionTab.Text = "Extract XCI";
             this.XciExtractionTab.UseVisualStyleBackColor = true;
@@ -118,17 +110,19 @@
             // XciOutputLabel
             // 
             this.XciOutputLabel.AutoSize = true;
-            this.XciOutputLabel.Location = new System.Drawing.Point(6, 35);
+            this.XciOutputLabel.Location = new System.Drawing.Point(12, 67);
+            this.XciOutputLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.XciOutputLabel.Name = "XciOutputLabel";
-            this.XciOutputLabel.Size = new System.Drawing.Size(67, 13);
+            this.XciOutputLabel.Size = new System.Drawing.Size(132, 25);
             this.XciOutputLabel.TabIndex = 6;
             this.XciOutputLabel.Text = "Output Path:";
             // 
             // XciOutputBrowse
             // 
-            this.XciOutputBrowse.Location = new System.Drawing.Point(266, 32);
+            this.XciOutputBrowse.Location = new System.Drawing.Point(532, 62);
+            this.XciOutputBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciOutputBrowse.Name = "XciOutputBrowse";
-            this.XciOutputBrowse.Size = new System.Drawing.Size(71, 20);
+            this.XciOutputBrowse.Size = new System.Drawing.Size(142, 38);
             this.XciOutputBrowse.TabIndex = 5;
             this.XciOutputBrowse.Text = "Browse";
             this.XciOutputBrowse.UseVisualStyleBackColor = true;
@@ -136,16 +130,18 @@
             // 
             // XciOutputPath
             // 
-            this.XciOutputPath.Location = new System.Drawing.Point(79, 32);
+            this.XciOutputPath.Location = new System.Drawing.Point(158, 62);
+            this.XciOutputPath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciOutputPath.Name = "XciOutputPath";
-            this.XciOutputPath.Size = new System.Drawing.Size(181, 20);
+            this.XciOutputPath.Size = new System.Drawing.Size(358, 31);
             this.XciOutputPath.TabIndex = 4;
             // 
             // XciExtract
             // 
-            this.XciExtract.Location = new System.Drawing.Point(3, 323);
+            this.XciExtract.Location = new System.Drawing.Point(6, 621);
+            this.XciExtract.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciExtract.Name = "XciExtract";
-            this.XciExtract.Size = new System.Drawing.Size(337, 35);
+            this.XciExtract.Size = new System.Drawing.Size(674, 67);
             this.XciExtract.TabIndex = 3;
             this.XciExtract.Text = "Extract";
             this.XciExtract.UseVisualStyleBackColor = true;
@@ -153,9 +149,10 @@
             // 
             // XciBrowse
             // 
-            this.XciBrowse.Location = new System.Drawing.Point(266, 6);
+            this.XciBrowse.Location = new System.Drawing.Point(532, 12);
+            this.XciBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciBrowse.Name = "XciBrowse";
-            this.XciBrowse.Size = new System.Drawing.Size(71, 20);
+            this.XciBrowse.Size = new System.Drawing.Size(142, 38);
             this.XciBrowse.TabIndex = 2;
             this.XciBrowse.Text = "Browse";
             this.XciBrowse.UseVisualStyleBackColor = true;
@@ -164,17 +161,19 @@
             // XciFileLabel
             // 
             this.XciFileLabel.AutoSize = true;
-            this.XciFileLabel.Location = new System.Drawing.Point(6, 8);
+            this.XciFileLabel.Location = new System.Drawing.Point(12, 15);
+            this.XciFileLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.XciFileLabel.Name = "XciFileLabel";
-            this.XciFileLabel.Size = new System.Drawing.Size(46, 13);
+            this.XciFileLabel.Size = new System.Drawing.Size(93, 25);
             this.XciFileLabel.TabIndex = 1;
             this.XciFileLabel.Text = "XCI File:";
             // 
             // XciPath
             // 
-            this.XciPath.Location = new System.Drawing.Point(58, 6);
+            this.XciPath.Location = new System.Drawing.Point(116, 12);
+            this.XciPath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.XciPath.Name = "XciPath";
-            this.XciPath.Size = new System.Drawing.Size(202, 20);
+            this.XciPath.Size = new System.Drawing.Size(400, 31);
             this.XciPath.TabIndex = 0;
             // 
             // NcaExtractionTab
@@ -189,10 +188,11 @@
             this.NcaExtractionTab.Controls.Add(this.NcaPath);
             this.NcaExtractionTab.Controls.Add(this.NcaEmulatorExtract);
             this.NcaExtractionTab.Controls.Add(this.NcaExtract);
-            this.NcaExtractionTab.Location = new System.Drawing.Point(4, 22);
+            this.NcaExtractionTab.Location = new System.Drawing.Point(8, 39);
+            this.NcaExtractionTab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaExtractionTab.Name = "NcaExtractionTab";
-            this.NcaExtractionTab.Padding = new System.Windows.Forms.Padding(3);
-            this.NcaExtractionTab.Size = new System.Drawing.Size(343, 364);
+            this.NcaExtractionTab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.NcaExtractionTab.Size = new System.Drawing.Size(686, 703);
             this.NcaExtractionTab.TabIndex = 1;
             this.NcaExtractionTab.Text = "Extract NCA";
             this.NcaExtractionTab.UseVisualStyleBackColor = true;
@@ -200,34 +200,38 @@
             // 
             // NcaTitleKey
             // 
-            this.NcaTitleKey.Location = new System.Drawing.Point(111, 58);
+            this.NcaTitleKey.Location = new System.Drawing.Point(222, 112);
+            this.NcaTitleKey.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaTitleKey.Name = "NcaTitleKey";
-            this.NcaTitleKey.Size = new System.Drawing.Size(226, 20);
+            this.NcaTitleKey.Size = new System.Drawing.Size(448, 31);
             this.NcaTitleKey.TabIndex = 14;
             // 
             // NcaTitleKeyLabel
             // 
             this.NcaTitleKeyLabel.AutoSize = true;
-            this.NcaTitleKeyLabel.Location = new System.Drawing.Point(6, 61);
+            this.NcaTitleKeyLabel.Location = new System.Drawing.Point(12, 117);
+            this.NcaTitleKeyLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NcaTitleKeyLabel.Name = "NcaTitleKeyLabel";
-            this.NcaTitleKeyLabel.Size = new System.Drawing.Size(99, 13);
+            this.NcaTitleKeyLabel.Size = new System.Drawing.Size(202, 25);
             this.NcaTitleKeyLabel.TabIndex = 13;
             this.NcaTitleKeyLabel.Text = "Title Key (Optional):";
             // 
             // NcaOutputLabel
             // 
             this.NcaOutputLabel.AutoSize = true;
-            this.NcaOutputLabel.Location = new System.Drawing.Point(6, 35);
+            this.NcaOutputLabel.Location = new System.Drawing.Point(12, 67);
+            this.NcaOutputLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NcaOutputLabel.Name = "NcaOutputLabel";
-            this.NcaOutputLabel.Size = new System.Drawing.Size(67, 13);
+            this.NcaOutputLabel.Size = new System.Drawing.Size(132, 25);
             this.NcaOutputLabel.TabIndex = 12;
             this.NcaOutputLabel.Text = "Output Path:";
             // 
             // NcaOutputBrowse
             // 
-            this.NcaOutputBrowse.Location = new System.Drawing.Point(266, 32);
+            this.NcaOutputBrowse.Location = new System.Drawing.Point(532, 62);
+            this.NcaOutputBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaOutputBrowse.Name = "NcaOutputBrowse";
-            this.NcaOutputBrowse.Size = new System.Drawing.Size(71, 20);
+            this.NcaOutputBrowse.Size = new System.Drawing.Size(142, 38);
             this.NcaOutputBrowse.TabIndex = 11;
             this.NcaOutputBrowse.Text = "Browse";
             this.NcaOutputBrowse.UseVisualStyleBackColor = true;
@@ -235,16 +239,18 @@
             // 
             // NcaOutputPath
             // 
-            this.NcaOutputPath.Location = new System.Drawing.Point(79, 32);
+            this.NcaOutputPath.Location = new System.Drawing.Point(158, 62);
+            this.NcaOutputPath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaOutputPath.Name = "NcaOutputPath";
-            this.NcaOutputPath.Size = new System.Drawing.Size(181, 20);
+            this.NcaOutputPath.Size = new System.Drawing.Size(358, 31);
             this.NcaOutputPath.TabIndex = 10;
             // 
             // NcaBrowse
             // 
-            this.NcaBrowse.Location = new System.Drawing.Point(266, 6);
+            this.NcaBrowse.Location = new System.Drawing.Point(532, 12);
+            this.NcaBrowse.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaBrowse.Name = "NcaBrowse";
-            this.NcaBrowse.Size = new System.Drawing.Size(71, 20);
+            this.NcaBrowse.Size = new System.Drawing.Size(142, 38);
             this.NcaBrowse.TabIndex = 9;
             this.NcaBrowse.Text = "Browse";
             this.NcaBrowse.UseVisualStyleBackColor = true;
@@ -253,34 +259,38 @@
             // NcaFileLabel
             // 
             this.NcaFileLabel.AutoSize = true;
-            this.NcaFileLabel.Location = new System.Drawing.Point(6, 8);
+            this.NcaFileLabel.Location = new System.Drawing.Point(12, 15);
+            this.NcaFileLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NcaFileLabel.Name = "NcaFileLabel";
-            this.NcaFileLabel.Size = new System.Drawing.Size(51, 13);
+            this.NcaFileLabel.Size = new System.Drawing.Size(103, 25);
             this.NcaFileLabel.TabIndex = 8;
             this.NcaFileLabel.Text = "NCA File:";
             // 
             // NcaPath
             // 
-            this.NcaPath.Location = new System.Drawing.Point(63, 6);
+            this.NcaPath.Location = new System.Drawing.Point(126, 12);
+            this.NcaPath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaPath.Name = "NcaPath";
-            this.NcaPath.Size = new System.Drawing.Size(197, 20);
+            this.NcaPath.Size = new System.Drawing.Size(390, 31);
             this.NcaPath.TabIndex = 7;
             // 
             // NcaEmulatorExtract
             // 
             this.NcaEmulatorExtract.AutoSize = true;
-            this.NcaEmulatorExtract.Location = new System.Drawing.Point(6, 300);
+            this.NcaEmulatorExtract.Location = new System.Drawing.Point(12, 577);
+            this.NcaEmulatorExtract.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaEmulatorExtract.Name = "NcaEmulatorExtract";
-            this.NcaEmulatorExtract.Size = new System.Drawing.Size(118, 17);
+            this.NcaEmulatorExtract.Size = new System.Drawing.Size(233, 29);
             this.NcaEmulatorExtract.TabIndex = 5;
             this.NcaEmulatorExtract.Text = "Extract for Emulator";
             this.NcaEmulatorExtract.UseVisualStyleBackColor = true;
             // 
             // NcaExtract
             // 
-            this.NcaExtract.Location = new System.Drawing.Point(3, 323);
+            this.NcaExtract.Location = new System.Drawing.Point(6, 621);
+            this.NcaExtract.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NcaExtract.Name = "NcaExtract";
-            this.NcaExtract.Size = new System.Drawing.Size(337, 35);
+            this.NcaExtract.Size = new System.Drawing.Size(674, 67);
             this.NcaExtract.TabIndex = 4;
             this.NcaExtract.Text = "Extract";
             this.NcaExtract.UseVisualStyleBackColor = true;
@@ -289,41 +299,24 @@
             // DescriptionLabel
             // 
             this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(9, 443);
+            this.DescriptionLabel.Location = new System.Drawing.Point(18, 852);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(66, 13);
+            this.DescriptionLabel.Size = new System.Drawing.Size(132, 25);
             this.DescriptionLabel.TabIndex = 7;
             this.DescriptionLabel.Text = "Description: ";
             // 
-            // HacProgress
-            // 
-            this.HacProgress.Location = new System.Drawing.Point(261, 443);
-            this.HacProgress.Name = "HacProgress";
-            this.HacProgress.Size = new System.Drawing.Size(100, 14);
-            this.HacProgress.TabIndex = 8;
-            // 
-            // ProgressLabel
-            // 
-            this.ProgressLabel.AutoSize = true;
-            this.ProgressLabel.Location = new System.Drawing.Point(204, 443);
-            this.ProgressLabel.Name = "ProgressLabel";
-            this.ProgressLabel.Size = new System.Drawing.Size(51, 13);
-            this.ProgressLabel.TabIndex = 9;
-            this.ProgressLabel.Text = "Progress:";
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 463);
-            this.Controls.Add(this.ProgressLabel);
-            this.Controls.Add(this.HacProgress);
+            this.ClientSize = new System.Drawing.Size(750, 890);
             this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.HacTab);
             this.Controls.Add(this.HactoolVersion);
-            this.Controls.Add(this.BuildLabel);
             this.Controls.Add(this.TitleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "EZ-HAC - Another hactool GUI!";
@@ -339,7 +332,6 @@
 
         #endregion
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.Label BuildLabel;
         private System.Windows.Forms.Label HactoolVersion;
         private System.Windows.Forms.TabControl HacTab;
         private System.Windows.Forms.TabPage XciExtractionTab;
@@ -360,8 +352,6 @@
         private System.Windows.Forms.Button NcaBrowse;
         private System.Windows.Forms.Label NcaFileLabel;
         private System.Windows.Forms.TextBox NcaPath;
-        private System.Windows.Forms.ProgressBar HacProgress;
-        private System.Windows.Forms.Label ProgressLabel;
         private System.Windows.Forms.TextBox NcaTitleKey;
         private System.Windows.Forms.Label NcaTitleKeyLabel;
     }

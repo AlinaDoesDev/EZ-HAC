@@ -59,5 +59,375 @@ namespace EZ_HAC.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to hactool.exe.
+        /// </summary>
+        internal static string Binary {
+            get {
+                return ResourceManager.GetString("Binary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description:.
+        /// </summary>
+        internal static string DescStrDefault {
+            get {
+                return ResourceManager.GetString("DescStrDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse for NCA output folder.
+        /// </summary>
+        internal static string DescStrDialogNCAOut {
+            get {
+                return ResourceManager.GetString("DescStrDialogNCAOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse for XCI output folder.
+        /// </summary>
+        internal static string DescStrDialogXCIOut {
+            get {
+                return ResourceManager.GetString("DescStrDialogXCIOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extract all NCA contents..
+        /// </summary>
+        internal static string DescStrNCA {
+            get {
+                return ResourceManager.GetString("DescStrNCA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extract all XCI contents..
+        /// </summary>
+        internal static string DescStrXCI {
+            get {
+                return ResourceManager.GetString("DescStrXCI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse for NCA file.
+        /// </summary>
+        internal static string DialogNCAInTitle {
+            get {
+                return ResourceManager.GetString("DialogNCAInTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse for XCI file.
+        /// </summary>
+        internal static string DialogXCIInTitle {
+            get {
+                return ResourceManager.GetString("DialogXCIInTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done!.
+        /// </summary>
+        internal static string DoneHeader {
+            get {
+                return ResourceManager.GetString("DoneHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done extracting NCA contents!.
+        /// </summary>
+        internal static string DoneNCAMsg {
+            get {
+                return ResourceManager.GetString("DoneNCAMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done extracting XCI contents!.
+        /// </summary>
+        internal static string DoneXCIMsg {
+            get {
+                return ResourceManager.GetString("DoneXCIMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The hactool executable hash does not match verified hactool hashes, do you want to continue?
+        ///Some functions of EZ-HAC may not function with an invalid hactool executable!.
+        /// </summary>
+        internal static string ErrBadHash {
+            get {
+                return ResourceManager.GetString("ErrBadHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The hactool executable was not found, please make sure the hactool executable is in the same path as the EZ-HAC executable!.
+        /// </summary>
+        internal static string ErrBinaryMissing {
+            get {
+                return ResourceManager.GetString("ErrBinaryMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning!.
+        /// </summary>
+        internal static string ErrHeader {
+            get {
+                return ResourceManager.GetString("ErrHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error!.
+        /// </summary>
+        internal static string ErrHeaderFatal {
+            get {
+                return ResourceManager.GetString("ErrHeaderFatal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid NCA path!.
+        /// </summary>
+        internal static string ErrInvalidInputNCAPath {
+            get {
+                return ResourceManager.GetString("ErrInvalidInputNCAPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid XCI path!.
+        /// </summary>
+        internal static string ErrInvalidInputXCIPath {
+            get {
+                return ResourceManager.GetString("ErrInvalidInputXCIPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid NCA output path!.
+        /// </summary>
+        internal static string ErrInvalidOutputNCAPath {
+            get {
+                return ResourceManager.GetString("ErrInvalidOutputNCAPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid XCI output path!.
+        /// </summary>
+        internal static string ErrInvalidOutputXCIPath {
+            get {
+                return ResourceManager.GetString("ErrInvalidOutputXCIPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your hactool keys were not found, please make sure your hactool keys is in the same path as the EZ-HAC executable and called &quot;keys.dat&quot;!.
+        /// </summary>
+        internal static string ErrKeysFileMissing {
+            get {
+                return ResourceManager.GetString("ErrKeysFileMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \exefs&quot;.
+        /// </summary>
+        internal static string ExeFS {
+            get {
+                return ResourceManager.GetString("ExeFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  --exefsdir=&quot;.
+        /// </summary>
+        internal static string ExeFSDir {
+            get {
+                return ResourceManager.GetString("ExeFSDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -k keys.dat .
+        /// </summary>
+        internal static string Keyfile {
+            get {
+                return ResourceManager.GetString("Keyfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to keys.dat.
+        /// </summary>
+        internal static string Keys {
+            get {
+                return ResourceManager.GetString("Keys", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NCA file (*.nca)|*.nca.
+        /// </summary>
+        internal static string NCAFilter {
+            get {
+                return ResourceManager.GetString("NCAFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  --outdir=&quot;.
+        /// </summary>
+        internal static string Outdir {
+            get {
+                return ResourceManager.GetString("Outdir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;.
+        /// </summary>
+        internal static string Quote {
+            get {
+                return ResourceManager.GetString("Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  --romfs=&quot;.
+        /// </summary>
+        internal static string RomFS {
+            get {
+                return ResourceManager.GetString("RomFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  --romfsdir=&quot;.
+        /// </summary>
+        internal static string RomFSDir {
+            get {
+                return ResourceManager.GetString("RomFSDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \.romfs&quot;.
+        /// </summary>
+        internal static string RomFSExt {
+            get {
+                return ResourceManager.GetString("RomFSExt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \romfs&quot;.
+        /// </summary>
+        internal static string RomFSFol {
+            get {
+                return ResourceManager.GetString("RomFSFol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  --titlekey=.
+        /// </summary>
+        internal static string Titlekey {
+            get {
+                return ResourceManager.GetString("Titlekey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -t xci .
+        /// </summary>
+        internal static string TypeXCI {
+            get {
+                return ResourceManager.GetString("TypeXCI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        internal static string Unknown {
+            get {
+                return ResourceManager.GetString("Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.0.0.
+        /// </summary>
+        internal static string V100 {
+            get {
+                return ResourceManager.GetString("V100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.0.1.
+        /// </summary>
+        internal static string V101 {
+            get {
+                return ResourceManager.GetString("V101", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.1.0.
+        /// </summary>
+        internal static string V110 {
+            get {
+                return ResourceManager.GetString("V110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B700771B2C236DD109A15CBC6E75D810E64F2C03F158AE7A6A3AF85181405226.
+        /// </summary>
+        internal static string Ver100Hash {
+            get {
+                return ResourceManager.GetString("Ver100Hash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C20C70DE51642A431244D3CC5E88CF711A1A523D17AB2692E37DCB69EA26A12E.
+        /// </summary>
+        internal static string Ver101Hash {
+            get {
+                return ResourceManager.GetString("Ver101Hash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D148EB2CD5D71B1BF87B0D39A399CF362671AF6E3A8C55D69225AE0DB9453EA2.
+        /// </summary>
+        internal static string Ver110Hash {
+            get {
+                return ResourceManager.GetString("Ver110Hash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XCI file (*.xci)|*.xci.
+        /// </summary>
+        internal static string XCIFilter {
+            get {
+                return ResourceManager.GetString("XCIFilter", resourceCulture);
+            }
+        }
     }
 }
